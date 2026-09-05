@@ -24,17 +24,26 @@
 
       <nav class="dash-nav" aria-label="Navigation espace encadrants">
         <a class="dash-nav-item is-active" href="#dashTop">
-          <span class="dash-nav-icon">🏠</span> Tableau de bord
+          <span class="dash-nav-icon">🏠</span> Accueil
         </a>
         <a class="dash-nav-item" href="#dashFaq">
-          <span class="dash-nav-icon">📚</span> FAQ &amp; ressources
+          <span class="dash-nav-icon">🔎</span> Recherche
+        </a>
+        <a class="dash-nav-item" href="#dashFormations">
+          <span class="dash-nav-icon">🎓</span> Formations
         </a>
         <a class="dash-nav-item" href="#dashChat">
-          <span class="dash-nav-icon">💬</span> Discussion
+          <span class="dash-nav-icon">👥</span> Communautés
+        </a>
+        <a class="dash-nav-item" href="#dashEvenements">
+          <span class="dash-nav-icon">🗓️</span> Événements
+        </a>
+        <a class="dash-nav-item" href="#dashProjets">
+          <span class="dash-nav-icon">📍</span> Projets
         </a>
       </nav>
 
-      <a class="dash-back" href="index.html">← Retour à l'assistant</a>
+      <a class="dash-back" href="index.html">← Retour à l'assistant RH</a>
     </aside>
 
     <!-- ============ CONTENU PRINCIPAL ============ -->
@@ -71,7 +80,7 @@
 
       <!-- Bloc FAQ -->
       <section class="dash-block" id="dashFaq">
-        <h2 class="dash-block-title">📚 FAQ &amp; ressources</h2>
+        <h2 class="dash-block-title">🔎 Recherche</h2>
 
         <!-- Ce conteneur reste vide dans le code source : les ressources managers sont
              chiffrées (voir MANAGER_RESOURCES_CIPHERTEXT dans manager-gate.js) et ne
@@ -91,13 +100,37 @@
         <div class="manager-resources" id="managerResources" hidden></div>
       </section>
 
-      <!-- Bloc Chat -->
+      <!-- Bloc Formations -->
+      <section class="dash-block" id="dashFormations">
+        <h2 class="dash-block-title">🎓 Formations</h2>
+        <div class="dash-card dash-placeholder">
+          <p class="dash-muted">Rubrique en cours de construction.</p>
+        </div>
+      </section>
+
+      <!-- Bloc Communautés (chat) -->
       <section class="dash-block" id="dashChat">
-        <h2 class="dash-block-title">💬 Discussion entre encadrants</h2>
+        <h2 class="dash-block-title">👥 Communautés</h2>
 
         <!-- Chat entre encadrants (phase de test, 4 matricules fictifs).
              Rempli par manager-chat.js une fois le matricule validé. -->
         <div class="manager-chat-container" id="managerChatContainer" hidden></div>
+      </section>
+
+      <!-- Bloc Événements -->
+      <section class="dash-block" id="dashEvenements">
+        <h2 class="dash-block-title">🗓️ Événements</h2>
+        <div class="dash-card dash-placeholder">
+          <p class="dash-muted">Rubrique en cours de construction.</p>
+        </div>
+      </section>
+
+      <!-- Bloc Projets -->
+      <section class="dash-block" id="dashProjets">
+        <h2 class="dash-block-title">📍 Projets</h2>
+        <div class="dash-card dash-placeholder">
+          <p class="dash-muted">Rubrique en cours de construction.</p>
+        </div>
       </section>
 
     </main>
@@ -116,8 +149,8 @@
       <div class="dash-widget">
         <h3 class="dash-widget-title">Raccourcis</h3>
         <div class="dash-shortcut-list">
-          <a class="dash-shortcut" href="#dashFaq">📚 Consulter les FAQ</a>
-          <a class="dash-shortcut" href="#dashChat">💬 Ouvrir la discussion</a>
+          <a class="dash-shortcut" href="#dashFaq">🔎 Consulter les FAQ</a>
+          <a class="dash-shortcut" href="#dashChat">👥 Ouvrir les communautés</a>
           <a class="dash-shortcut" href="index.html">🤖 Assistant RH</a>
         </div>
       </div>
