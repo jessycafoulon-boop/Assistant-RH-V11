@@ -1185,3 +1185,43 @@ html{ scroll-behavior:auto; }
   max-width:1240px;
   margin:0 auto;
 }
+
+/* =========================================================
+   WIDGETS "CONTACTS UTILES" / "ANNUAIRE" (recherche par mot-clé)
+   Ces widgets réutilisent .manager-resource (flex en ligne),
+   mais ont 3 blocs à empiler verticalement (titre, champ de
+   recherche, résultats) au lieu de 2 côte à côte.
+========================================================= */
+
+.manager-resource.manager-contacts,
+.manager-resource.manager-annuaire{
+  flex-direction:column;
+  align-items:stretch;
+  gap:0;
+}
+
+.manager-resource.manager-contacts .manager-resource-info,
+.manager-resource.manager-annuaire .manager-resource-info{
+  margin-bottom:10px;
+}
+
+.manager-contacts-results,
+.manager-annuaire-results{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  width:100%;
+}
+
+.manager-contact-card{
+  width:100%;
+  box-sizing:border-box;
+}
+
+.manager-contact-card .manager-resource-link{
+  display:block;
+  width:100%;
+  box-sizing:border-box;
+  text-align:center;
+  margin-top:8px;
+}
