@@ -7,41 +7,68 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="app">
-    <header class="header">
-      <div class="brand">
-        <div class="logo">🔐</div>
-        <div>
-          <h1>Espace Encadrants</h1>
-          <div class="subtitle">Assistant RH — Mairie de Conflans-Sainte-Honorine</div>
+  <div class="dash">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="dash-sidebar">
+      <div class="dash-brand">
+        <div class="dash-brand-logo">🔐</div>
+        <div class="dash-brand-text">
+          <strong>Espace Encadrants</strong>
+          <span>Assistant RH</span>
         </div>
       </div>
-    </header>
 
-    <main class="content">
-      <section class="welcome">
-        <p><a href="index.html">← Retour à l'assistant</a></p>
+      <nav class="dash-nav" aria-label="Navigation espace encadrants">
+        <a class="dash-nav-item is-active" href="#dashTop">
+          <span class="dash-nav-icon">🏠</span> Tableau de bord
+        </a>
+        <a class="dash-nav-item" href="#dashFaq">
+          <span class="dash-nav-icon">📚</span> FAQ &amp; ressources
+        </a>
+        <a class="dash-nav-item" href="#dashChat">
+          <span class="dash-nav-icon">💬</span> Discussion
+        </a>
+      </nav>
 
-        <div id="managerGate">
-          <h2>🔑 Ressources réservées aux Encadrants</h2>
-          <p style="color:var(--muted); font-size:13px; line-height:1.5;">
-            Saisissez votre matricule d'encadrant. Lors de votre toute première
-            connexion, vous choisirez vous-même un mot de passe personnel.
-          </p>
+      <a class="dash-back" href="index.html">← Retour à l'assistant</a>
+    </aside>
 
-          <div id="managerGateStep1" class="manager-pin-row">
-            <input id="managerMatricule" class="manager-pin-input" type="text" inputmode="numeric"
-                   maxlength="10" autocomplete="off"
-                   placeholder="Matricule" aria-label="Matricule d'encadrant">
-            <button id="managerMatriculeSubmit" class="manager-pin-submit" type="button">
-              Continuer
-            </button>
-          </div>
+    <!-- ============ CONTENU PRINCIPAL ============ -->
+    <main class="dash-main" id="dashTop">
 
-          <div id="managerGateStep2" class="manager-gate-step2" hidden></div>
-
-          <div id="managerPinError" class="manager-pin-error"></div>
+      <header class="dash-topbar">
+        <div>
+          <h1>Tableau de bord</h1>
+          <p>Ressources, questions/réponses et échanges entre encadrants.</p>
         </div>
+      </header>
+
+      <!-- Connexion par matricule (inchangé fonctionnellement) -->
+      <section class="dash-card" id="managerGate">
+        <h2>🔑 Ressources réservées aux Encadrants</h2>
+        <p class="dash-muted">
+          Saisissez votre matricule d'encadrant. Lors de votre toute première
+          connexion, vous choisirez vous-même un mot de passe personnel.
+        </p>
+
+        <div id="managerGateStep1" class="manager-pin-row">
+          <input id="managerMatricule" class="manager-pin-input" type="text" inputmode="numeric"
+                 maxlength="10" autocomplete="off"
+                 placeholder="Matricule" aria-label="Matricule d'encadrant">
+          <button id="managerMatriculeSubmit" class="manager-pin-submit" type="button">
+            Continuer
+          </button>
+        </div>
+
+        <div id="managerGateStep2" class="manager-gate-step2" hidden></div>
+
+        <div id="managerPinError" class="manager-pin-error"></div>
+      </section>
+
+      <!-- Bloc FAQ -->
+      <section class="dash-block" id="dashFaq">
+        <h2 class="dash-block-title">📚 FAQ &amp; ressources</h2>
 
         <!-- Ce conteneur reste vide dans le code source : les ressources managers sont
              chiffrées (voir MANAGER_RESOURCES_CIPHERTEXT dans manager-gate.js) et ne
@@ -59,12 +86,40 @@
           <div id="managerSearchCount" class="manager-search-count"></div>
         </div>
         <div class="manager-resources" id="managerResources" hidden></div>
+      </section>
+
+      <!-- Bloc Chat -->
+      <section class="dash-block" id="dashChat">
+        <h2 class="dash-block-title">💬 Discussion entre encadrants</h2>
 
         <!-- Chat entre encadrants (phase de test, 4 matricules fictifs).
              Rempli par manager-chat.js une fois le matricule validé. -->
         <div class="manager-chat-container" id="managerChatContainer" hidden></div>
       </section>
+
     </main>
+
+    <!-- ============ COLONNE INFOS ============ -->
+    <aside class="dash-aside">
+      <div class="dash-widget">
+        <h3 class="dash-widget-title">Bon à savoir</h3>
+        <ul class="dash-tips">
+          <li>Le chat est identifié par matricule : impossible d'usurper un collègue.</li>
+          <li>Utilisez la recherche des FAQ pour retrouver une réponse en un mot-clé.</li>
+          <li>Filtrez la discussion par thème (Paie, Formation, Carrières, Urgent) pour ne pas noyer les messages importants.</li>
+        </ul>
+      </div>
+
+      <div class="dash-widget">
+        <h3 class="dash-widget-title">Raccourcis</h3>
+        <div class="dash-shortcut-list">
+          <a class="dash-shortcut" href="#dashFaq">📚 Consulter les FAQ</a>
+          <a class="dash-shortcut" href="#dashChat">💬 Ouvrir la discussion</a>
+          <a class="dash-shortcut" href="index.html">🤖 Assistant RH</a>
+        </div>
+      </div>
+    </aside>
+
   </div>
 
   <script src="manager-gate.js"></script>
