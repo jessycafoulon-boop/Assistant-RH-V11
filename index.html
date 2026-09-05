@@ -10,146 +10,133 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="dash">
-
-    <!-- ============ SIDEBAR ============ -->
-    <aside class="dash-sidebar">
-      <div class="dash-brand">
-        <div class="dash-brand-logo">🪄</div>
-        <div class="dash-brand-text">
-          <strong>Assistant RH</strong>
-          <span>Mairie de Conflans</span>
-        </div>
+<div class="app">
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+  <header class="header">
+    <div class="brand">
+      <div class="logo">
+        🪄
       </div>
-
-      <nav class="dash-nav" aria-label="Navigation de l'assistant RH">
-        <a class="dash-nav-item is-active" href="#dashHome">
-          <span class="dash-nav-icon">🏠</span> Accueil
-        </a>
-        <a class="dash-nav-item" href="#dashChat">
-          <span class="dash-nav-icon">🔎</span> Recherche
-        </a>
-        <a class="dash-nav-item" href="#dashFormations">
-          <span class="dash-nav-icon">🎓</span> Formations
-        </a>
-        <a class="dash-nav-item" href="#dashCommunautes">
-          <span class="dash-nav-icon">👥</span> Communautés
-        </a>
-        <a class="dash-nav-item" href="#dashEvenements">
-          <span class="dash-nav-icon">🗓️</span> Événements
-        </a>
-        <a class="dash-nav-item" href="#dashProjets">
-          <span class="dash-nav-icon">📍</span> Projets territoriaux
-        </a>
-        <a class="dash-nav-item" href="#dashFavoris">
-          <span class="dash-nav-icon">⭐</span> Favoris
-        </a>
-      </nav>
-
-      <a class="dash-back" href="managers.html">🔐 Espace Encadrants</a>
-    </aside>
-
-    <!-- ============ CONTENU PRINCIPAL ============ -->
-    <main class="dash-main" id="dashHome">
-
-      <header class="dash-topbar">
-        <div>
-          <h1>👋 Bienvenue</h1>
-          <p>Je suis votre Assistant RH. Posez-moi votre question et je vous orienterai vers le bon interlocuteur ou la bonne ressource.</p>
+      <div>
+        <h1>
+          Assistant RH
+        </h1>
+        <div class="subtitle">
+          Mairie de Conflans-Sainte-Honorine
         </div>
-      </header>
-
-      <section class="dash-card">
-        <div id="suggestions" class="suggestions"></div>
-      </section>
-
-      <!-- Bloc Recherche / Chat -->
-      <section class="dash-block" id="dashChat">
-        <h2 class="dash-block-title">🔎 Recherche</h2>
-        <section id="gameContainer" class="hidden"></section>
-        <section class="chat" id="chat" aria-live="polite"></section>
-      </section>
-
-      <!-- Rubriques à construire -->
-      <section class="dash-block" id="dashFormations">
-        <h2 class="dash-block-title">🎓 Formations</h2>
-        <div class="dash-card dash-placeholder">
-          <p class="dash-muted">Rubrique en cours de construction — elle donnera accès à des liens et ressources de formation.</p>
-        </div>
-      </section>
-
-      <section class="dash-block" id="dashCommunautes">
-        <h2 class="dash-block-title">👥 Communautés</h2>
-        <div class="dash-card dash-placeholder">
-          <p class="dash-muted">Rubrique en cours de construction — espaces d'échange par thème (juridique, finances, achats/marchés, RH…).</p>
-        </div>
-      </section>
-
-      <section class="dash-block" id="dashEvenements">
-        <h2 class="dash-block-title">🗓️ Événements</h2>
-        <div class="dash-card dash-placeholder">
-          <p class="dash-muted">Rubrique en cours de construction — actualités et événements internes.</p>
-        </div>
-      </section>
-
-      <section class="dash-block" id="dashProjets">
-        <h2 class="dash-block-title">📍 Projets territoriaux</h2>
-        <div class="dash-card dash-placeholder">
-          <p class="dash-muted">Rubrique en chantier.</p>
-        </div>
-      </section>
-
-      <section class="dash-block" id="dashFavoris">
-        <h2 class="dash-block-title">⭐ Favoris</h2>
-        <div class="dash-card dash-placeholder">
-          <p class="dash-muted">Rubrique en chantier.</p>
-        </div>
-      </section>
-
-    </main>
-
-    <!-- ============ COLONNE INFOS ============ -->
-    <aside class="dash-aside">
-      <div class="dash-widget">
-        <h3 class="dash-widget-title">Bon à savoir</h3>
-        <ul class="dash-tips">
-          <li>Posez votre question dans la barre en bas de page, en langage naturel.</li>
-          <li>L'Espace Encadrants regroupe les ressources et le chat réservés aux managers.</li>
-        </ul>
-      </div>
-
-      <div class="dash-widget">
-        <h3 class="dash-widget-title">Raccourcis</h3>
-        <div class="dash-shortcut-list">
-          <a class="dash-shortcut" href="#dashChat">🔎 Poser une question</a>
-          <a class="dash-shortcut" href="managers.html">🔐 Espace Encadrants</a>
-        </div>
-      </div>
-    </aside>
-
-  </div>
-
-  <!-- ============ BARRE DE RECHERCHE ============ -->
-  <div class="searchbar">
-    <div class="searchbar-inner">
-      <form class="form" id="questionForm">
-        <input
-          id="question"
-          type="text"
-          autocomplete="off"
-          autocapitalize="sentences"
-          enterkeyhint="send"
-          placeholder="Ex. « Je ne comprends pas mon bulletin de salaire »"
-          aria-label="Votre question">
-        <button class="send" type="submit">Envoyer</button>
-      </form>
-      <div class="disclaimer">
-        Cet assistant est conçu pour vous orienter de manière générale.
-        Pour une situation individuelle, contactez l'interlocuteur indiqué.
       </div>
     </div>
+  </header>
+  <!-- =====================================================
+       CONTENU
+  ====================================================== -->
+  <main class="content">
+    <section class="welcome">
+      <h2>
+        👋 Bienvenue
+      </h2>
+      <p>
+        Je suis votre Assistant RH.
+        Posez-moi votre question et je vous
+        orienterai vers le bon interlocuteur
+        ou la bonne ressource.
+      </p>
+      <!-- ACCÈS MANAGERS -->
+      <div class="manager-access">
+        <a class="manager-button" href="managers.html">
+          🔐 Espace Encadrants
+        </a>
+      </div>
+      <div
+        class="suggestions"
+        id="suggestions">
+      </div>
+      <button
+        class="game-launch"
+        type="button"
+        onclick="startTreasureHunt()">
+        🕵️‍♀️ Aider Sam ?
+      </button>
+      <details class="manager-faq" style="margin-top:12px;">
+        <summary class="manager-faq-header">
+          🎴 Les Incollables
+        </summary>
+        <div class="manager-faq-items">
+          <div class="manager-faq-item">
+            <div class="manager-faq-answer" style="padding-top:12px;">
+              <p>
+                Choisissez un thème pour lancer les fiches question/réponse.
+              </p>
+              <div class="actions">
+                <button
+                  class="action primary"
+                  type="button"
+                  onclick="startIncollablesRH('Rémunération')">
+                  💶 Rémunération
+                </button>
+                <button
+                  class="action primary"
+                  type="button"
+                  onclick="startIncollablesRH('Entretien professionnel')">
+                  🗣️ Entretien professionnel
+                </button>
+                <button
+                  class="action primary"
+                  type="button"
+                  onclick="startIncollablesRH('Formation')">
+                  🎓 Formation
+                </button>
+                <button
+                  class="action"
+                  type="button"
+                  onclick="startIncollablesRH()">
+                  🎲 Tous les thèmes mélangés
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section
+      id="gameContainer"
+      class="hidden">
+    </section>
+    <section
+      class="chat"
+      id="chat"
+      aria-live="polite">
+    </section>
+  </main>
+  <!-- =====================================================
+       BARRE DE RECHERCHE
+  ====================================================== -->
+  <div class="searchbar">
+    <form
+      class="form"
+      id="questionForm">
+      <input
+        id="question"
+        type="text"
+        autocomplete="off"
+        autocapitalize="sentences"
+        enterkeyhint="send"
+        placeholder="Ex. « Je ne comprends pas mon bulletin de salaire »"
+        aria-label="Votre question">
+      <button
+        class="send"
+        type="submit">
+        Envoyer
+      </button>
+    </form>
+    <div class="disclaimer">
+      Cet assistant est conçu pour vous orienter de manière générale.
+      Pour une situation individuelle, contactez l'interlocuteur indiqué.
+    </div>
   </div>
-
+</div>
 <script src="app.js"></script>
 <script src="incollables-rh.js"></script>
 <script src="mission-integration.js"></script>
