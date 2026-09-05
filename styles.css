@@ -1162,3 +1162,25 @@ html{ scroll-behavior:auto; }
     flex-direction:column;
   }
 }
+
+/* =========================================================
+   RUBRIQUES EN CHANTIER (dashboard)
+========================================================= */
+
+.dash-placeholder{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  min-height:110px;
+  border-style:dashed;
+}
+
+.dash-placeholder .dash-muted{
+  max-width:420px;
+}
+
+.searchbar-inner{
+  max-width:1240px;
+  margin:0 auto;
+}
